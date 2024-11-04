@@ -10,12 +10,11 @@ const CreateTask = () => {
     const [taskDescription, setTaskDescription] = useState('');
     const [category, setCategory] = useState('');
 
-    const [newTask, setNewTask] = useState({})
-
 
     const onSubmitCreateTask  = (e) => {
         e.preventDefault();
-        setNewTask({taskTitle, taskDate, taskDescription, category, active:false, newTask: true, failed:false, completed:false } )
+
+        const newTask = {taskTitle, taskDate, taskDescription, category, active:false, newTask: true, failed:false, completed:false }
 
     
         const localStorageData = userData
